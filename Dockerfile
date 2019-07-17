@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-MAINTAINER 741162948@gmail.com
+MAINTAINER 741162948@qq.com
 
 #mainland china aliyun sources list
 #COPY ./sources.list /etc/apt/sources.list 
