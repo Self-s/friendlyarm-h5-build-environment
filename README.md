@@ -4,7 +4,6 @@
 ### make u-boot:
 ```sh
     cd u-boot
-    cd u-boot
     make nanopi_h5_defconfig CROSS_COMPILE=aarch64-linux-gnu-
 ```
 ### make linux:
