@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
-MAINTAINER jaredlee0228@gmail.com
+MAINTAINER 741162948@gmail.com
 
-#mainland chain aliyun sources list
+#mainland china aliyun sources list
 #COPY ./sources.list /etc/apt/sources.list 
 
 RUN apt-get update
@@ -20,7 +20,5 @@ RUN wget https://media.githubusercontent.com/media/Self-s/friendlyarm-h5-build-e
 RUN tar xf h5-toolchain.tar.xz
 
 ENV PATH=/tmp/friendlyarm/gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu/bin:$PATH
-
-
 
 CMD ["/bin/bash"]
