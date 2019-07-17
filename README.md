@@ -1,13 +1,13 @@
 # friendlyarm-h5-build-environment
-##Docker repository for friendlyarm h5 build environment
+## Docker repository for friendlyarm h5 build environment
 
-###make u-boot:
+### make u-boot:
 ```sh
     cd u-boot
     cd u-boot
     make nanopi_h5_defconfig CROSS_COMPILE=aarch64-linux-gnu-
 ```
-###make linux:
+### make linux:
 ```sh
     cd linux
     touch .scmversion
