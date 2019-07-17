@@ -16,7 +16,6 @@ RUN mkdir /tmp/friendlyarm
 WORKDIR /tmp/friendlyarm
 
 RUN wget https://media.githubusercontent.com/media/Self-s/friendlyarm-h5-build-environment/master/h5-toolchain.tar.xz
-
 RUN tar xf h5-toolchain.tar.xz
 
 ENV PATH=/tmp/friendlyarm/gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu/bin:$PATH
