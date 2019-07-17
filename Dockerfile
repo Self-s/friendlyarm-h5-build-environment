@@ -4,16 +4,23 @@ MAINTAINER jaredlee0228@gmail.com
 COPY ./sources.list /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get install -y git \
+RUN apt-get install -y wget \
+                       vim \
+                       git \
                        make \
                        gcc \
-                       device-tree-compiler
+                       device-tree-compiler \
+                       bc
 
-RUN mkdir /friendlyarm
-ADD ./gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu.tar.xz /friendlyarm
+RUN mkdir /tmp/friendlyarm
+WORKDIR /tmp/friendlyarm
 
-ENV PATH=/friendlyarm/gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu/bin:$PATH
+RUN wget https://media.githubusercontent.com/media/Self-s/friendlyarm-h5-build-environment/master/gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu.tar.xz
 
-WORKDIR /friendlyarm
+RUN tar xf gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu.tar.xz
+
+ENV PATH=/tmp/friendlyarm/gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu/bin:$PATH
+
+
 
 CMD ["/bin/bash"]
